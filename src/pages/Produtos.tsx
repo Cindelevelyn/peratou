@@ -2,11 +2,11 @@ import { NavHeader } from "../Components/NavHeader";
 import fruitsBanner from "../assets/fruits-banner.png";
 import { CardProduto } from "../Components/CardProduto";
 import { data } from "../api/data";
+import { useState } from "react";
 
 export function Produtos() {
-
+  const [cartItem, setCartItem] = useState([]);
   
-
   return (
     <div className="bg-gradient-to-b from-white to-cinzaClaro min-h-[100vh] h-full">
       <NavHeader />
@@ -24,8 +24,11 @@ export function Produtos() {
                     calories={fruta.nutritions.calories}
                     fat={fruta.nutritions.fat}
                     sugar={fruta.nutritions.sugar}
-                    genus={""} id={0} family={""} order={""}
-                    />
+                    genus={""}
+                    id={0}
+                    family={""}
+                    order={""}
+                  />
                 </div>
               );
             })}
